@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>viohar_prediction</name>
+  <version>0.0.1</version>
+  <description>Web UI + services to run VINS-Mono + predictor via your existing vins_auto_launcher and stream predictions to the browser.</description>
+
+  <maintainer email="you@example.com">Your Name</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>message_generation</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>rosbridge_server</exec_depend>
+
+  <!-- We launch vins_auto_launcher (already in your workspace). -->
+  <exec_depend>vins_auto_launcher</exec_depend>
+</package>

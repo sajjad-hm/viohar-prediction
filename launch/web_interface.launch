@@ -1,0 +1,15 @@
+<launch>
+  <!-- WebSocket bridge for the browser -->
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
+    <arg name="port" value="9090"/>
+  </include>
+
+  <!-- Orchestrator service node -->
+  <node pkg="viohar_prediction" type="pipeline_launcher.py" name="pipeline_launcher" output="screen"/>
+
+  <!-- Static HTTP server to serve ./web at http://localhost:8000 -->
+  <node pkg="viohar_prediction" type="static_server.py" name="static_server" output="screen">
+    <param name="web_dir" value="$(find viohar_prediction)/web"/>
+    <param name="port" value="8000"/>
+  </node>
+</launch>
