@@ -78,7 +78,7 @@ viohar-prediction/
 1. Launch the system:
 
    ```bash
-   roslaunch viohar_prediction main.launch
+   roslaunch viohar_prediction web_interface.launch
    ```
 
 2. Access the web interface at `http://localhost:8080`.
